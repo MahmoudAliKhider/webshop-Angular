@@ -1,0 +1,19 @@
+.container{
+  box-shadow:0px 4px 3px 0 rgba(151,151,151,0.5);
+  padding: 20px;
+}
+.left img{
+  width: 25px;
+  height: 25px;
+  color: gray;
+  border: none;
+  background-color: #FFFFFF;
+}
+.right {
+  margin-left: 50%;
+}
+.right p{
+  font-size: medium;
+  padding-left: 9px;
+  color: gray;
+}

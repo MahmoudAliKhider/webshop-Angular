@@ -1,0 +1,72 @@
+.btn{
+  border: 1px solid;
+  padding-left:20px ;
+  padding-right:20px ;
+  border-radius: 20px;
+}
+.btn:hover{
+  background-color: #000;
+  color: #fff;
+}
+.row img
+{
+  width: 180px;
+  height: 170px;
+  border-radius: 80px;
+  padding: 4px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card{
+  width :103%;
+  height: 345px;
+  border-radius: 8px;
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow:1px 4px 3px 0 rgba(151,151,151,0.5);
+}
+.card img{
+  width: 101%;
+}
+.card i{
+  margin-left: 10px;
+}
+
+.card .images{
+  width: 35px;
+  height: 35px;
+}
+.card p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left{
+  padding-left: 13px;
+}
+.right{
+  padding-right: 13px;
+}
+.right img{
+  width: 25px;
+  height: 25px;
+}
+.right p{
+  color: rgb(222, 222, 126);
+}
+.sale
+{
+  height: 100px;
+  background-color: rgb(126, 126, 126);
+  border-radius: 5px;
+}
+.sale img{
+  margin-left: 150px;
+}
+.sale h5{
+  margin-top: 40px;
+  margin-left: 230px;
+  color: #fff;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
