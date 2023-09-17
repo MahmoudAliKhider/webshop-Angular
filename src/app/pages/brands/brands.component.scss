@@ -21,20 +21,23 @@
   font-weight: bold;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pagination-button {
-  position: relative;
-  left: 44%;
-  text-align: center;
   background-color: #fff;
   color: #959393;
   border: none;
   padding: 7px;
   cursor: pointer;
-  margin: 15px;
-  margin-bottom: 180px;
+  margin-bottom: 130px;
 }
 
 .pagination-button:hover {
+  border: none;
   background-color: #959393;
   color: #fff;
 }

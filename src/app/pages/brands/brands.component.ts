@@ -14,7 +14,7 @@ export class BrandsComponent implements OnInit, OnDestroy {
   brands: Brand[] | null = null;
   paginationResult: any = {};
   ngOnInit(): void {
-    this.loadBrands(1, 5);
+    this.loadBrands(1, 10);
   }
 
   constructor(private brandServices: BrandsService) {}

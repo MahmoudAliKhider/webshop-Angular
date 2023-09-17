@@ -14,10 +14,11 @@
 
 </div>
 <div class="pagination">
-  <button *ngIf="paginationResult.prev" (click)="prevPage()" class="pagination-button">
+  <button *ngIf="paginationResult.prev" (click)="prevPage()" class="pagination-button" [disabled]="!paginationResult.prev">
     <i class="fas fa-arrow-left"></i> Previous
   </button>
-  <button *ngIf="paginationResult.next" (click)="nextPage()" class="pagination-button">
+  <button *ngIf="paginationResult.next" (click)="nextPage()" class="pagination-button" [disabled]="!paginationResult.next">
     Next <i class="fas fa-arrow-right"></i>
   </button>
 </div>
+
