@@ -1,0 +1,53 @@
+<div class="container mt-5" >
+  <div class="row justify-content-center" >
+    <div class="col-md-6" >
+      <div class="form">
+        <h4 class="card-hader">تسجيل الدخول</h4>
+        <div class="card-body" *ngIf="loginForm">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                formControlName="email"
+                placeholder="البريد الاكتروني"
+              />
+              <div
+                *ngIf="loginForm?.get('email')?.hasError('required') && loginForm?.get('email')?.touched"
+                class="text-danger"
+              >
+                Email is required.
+              </div>
+              <div
+                *ngIf="loginForm?.get('email')?.hasError('email') && loginForm?.get('email')?.touched"
+                class="text-danger"
+              >
+                Invalid email format.
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                formControlName="password"
+                placeholder="كلمه السر"
+              />
+              <div
+                *ngIf="loginForm?.get('password')?.hasError('required') && loginForm?.get('password')?.touched"
+                class="text-danger"
+              >
+                Password is required.
+              </div>
+            </div>
+            <button type="submit" class="btn">تسجيل دخول</button>
+            <div class="cont d-flex">
+              <h6 ><button style="color: red;" routerLink="/register">اضغط هنا</button>  ليس لديك حساب؟</h6>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
