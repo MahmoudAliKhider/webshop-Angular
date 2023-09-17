@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +12,10 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { CategoryComponent } from './pages/category/category.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BrandsComponent } from './pages/brands/brands.component';
+import { NgxPaginationModule } from 'ngx-pagination'; // Import NgxPaginationModule here
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     FooterComponent,
     LoginComponent,
     SignUpComponent,
+    CategoryComponent,
+    NotFoundComponent,
+    BrandsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
     }),
+    NgxPaginationModule, // Ensure that NgxPaginationModule is imported here
   ],
   providers: [
     {

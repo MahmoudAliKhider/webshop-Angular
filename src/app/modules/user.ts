@@ -1,5 +1,5 @@
 export interface User {
-  fullName: string;
-  imageUrl: string;
+  name: string;
   token: string;
+  role:string;
 }
