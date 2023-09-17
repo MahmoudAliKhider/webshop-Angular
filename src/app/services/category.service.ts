@@ -1,8 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Category } from '../modules/category';
-import { Observable } from 'rxjs';
-import { PaginationResult } from '../modules/pagination';
 
 @Injectable({
   providedIn: 'root',

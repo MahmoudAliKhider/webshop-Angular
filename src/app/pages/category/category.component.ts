@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Category } from 'src/app/modules/category';
-import { Pagination, PaginationResult } from 'src/app/modules/pagination';
 import { CategoryService } from 'src/app/services/category.service';
 @Component({
   selector: 'app-category',
@@ -16,7 +15,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   constructor(private category: CategoryService) {}
   ngOnInit(): void {
-    this.loadCategories(1,5);
+    this.loadCategories(1,10);
   }
 
   loadCategories(page: number, limit: number) {
