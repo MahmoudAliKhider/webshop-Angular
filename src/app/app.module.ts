@@ -17,7 +17,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrandsComponent } from './pages/brands/brands.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductsComponent } from './pages/products/products.component';
-import { CategoryHeaderComponent } from './components/category-header/category-header.component'; // Import NgxPaginationModule here
+import { CategoryHeaderComponent } from './components/category-header/category-header.component';
+import { SideFilterComponent } from './pages/side-filter/side-filter.component'; // Import NgxPaginationModule here
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CategoryHeaderComponent } from './components/category-header/category-h
     BrandsComponent,
     ProductsComponent,
     CategoryHeaderComponent,
+    SideFilterComponent,
   ],
   imports: [
     BrowserModule,
