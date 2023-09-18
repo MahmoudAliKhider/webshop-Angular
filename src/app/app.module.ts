@@ -15,7 +15,9 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrandsComponent } from './pages/brands/brands.component';
-import { NgxPaginationModule } from 'ngx-pagination'; // Import NgxPaginationModule here
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ProductsComponent } from './pages/products/products.component';
+import { CategoryHeaderComponent } from './components/category-header/category-header.component'; // Import NgxPaginationModule here
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { NgxPaginationModule } from 'ngx-pagination'; // Import NgxPaginationMod
     CategoryComponent,
     NotFoundComponent,
     BrandsComponent,
+    ProductsComponent,
+    CategoryHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,7 @@ import { NgxPaginationModule } from 'ngx-pagination'; // Import NgxPaginationMod
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
     }),
-    NgxPaginationModule, // Ensure that NgxPaginationModule is imported here
+    NgxPaginationModule, 
   ],
   providers: [
     {

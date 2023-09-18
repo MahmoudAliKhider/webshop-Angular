@@ -1,0 +1,32 @@
+/* category-header.component.css */
+
+.header {
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  text-align: right; /* Align text to the right */
+}
+
+.category-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Align the items to the right */
+  padding: 0;
+}
+
+.category-item {
+  margin: 0 10px;
+  float: right; /* Float the items to the right */
+}
+
+.category-item a {
+  text-decoration: none;
+  color: #494949; /* Link color */
+  font-weight: bold;
+}
+
+.category-item a:hover {
+  color: gray; /* Link color on hover */
+}

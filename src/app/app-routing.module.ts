@@ -7,6 +7,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { CategoryComponent } from './pages/category/category.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrandsComponent } from './pages/brands/brands.component';
+import { ProductsComponent } from './pages/products/products.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
     children: [
       { path: 'categories', component: CategoryComponent },
       { path: 'brands', component: BrandsComponent },
+      { path: 'products', component: ProductsComponent },
     ],
   },
   { path: 'not-found', component: NotFoundComponent },

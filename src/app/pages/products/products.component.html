@@ -1,0 +1,40 @@
+<app-category-header></app-category-header>
+<div class="result">
+  <h3>عدد المنتجات هذة الصفحة <mark>{{result}}</mark></h3>
+</div>
+<div class="container mt-4">
+
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of products">
+      <div class="col-md-12">
+        <div class="card">
+          <img [src]="product.imageCover" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h6 class="card-title">{{ product.title | titlecase}}</h6>
+            <!-- <p class="card-text">{{ product.description }}</p> -->
+          </div>
+          <div class="d-flex justify-content-between px-3">
+            <p class="card-text">Quantity: {{ product.quantity }}</p>
+            <p class="card-text">Sold: {{ product.sold }}</p>
+          </div>
+          <div class="d-flex justify-content-between ">
+            <div class="d-flex left">
+              <p class="price">جنية</p>
+              <h5 class="price-value">{{ product.price }}</h5>
+            </div>
+            <div class="d-flex right">
+              <p class="rating">{{ product.ratingsQuantity }}</p>
+              <img src="/assets/images/rate.png" alt="Rating" class="rating-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button class="btn custom-button" (click)="prevPage()" [disabled]="paginationResult.currentPage === 1">الصفحة
+      السابقة</button>
+    <button class="btn custom-button" (click)="nextPage()"
+      [disabled]="paginationResult.currentPage === paginationResult.totalPages">الصفحة التالية</button>
+  </div>

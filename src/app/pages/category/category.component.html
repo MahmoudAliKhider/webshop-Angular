@@ -13,13 +13,11 @@
   </div>
 
 </div>
-<div class="pagination">
-  <button *ngIf="paginationResult.prev" (click)="prevPage()" class="pagination-button">
-    <i class="fas fa-arrow-left"></i> Previous
-  </button>
-  <button *ngIf="paginationResult.next" (click)="nextPage()" class="pagination-button">
-    Next <i class="fas fa-arrow-right"></i>
-  </button>
+<div class="text-center">
+  <button class="btn custom-button" (click)="prevPage()" [disabled]="paginationResult.currentPage === 1">الصفحة
+    السابقة</button>
+  <button class="btn custom-button" (click)="nextPage()"
+    [disabled]="paginationResult.currentPage === paginationResult.totalPages">الصفحة التالية</button>
 </div>
 
 

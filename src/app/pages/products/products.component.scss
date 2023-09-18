@@ -1,0 +1,81 @@
+/* product-list.component.scss */
+.result{
+  text-align: right;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 6px;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  // padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+.card img{
+  height: 200px;
+}
+.price {
+  font-size: 1rem;
+  margin: 2px;
+  font-weight: bold;
+  // color: #009688;
+}
+
+.price-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  // color: #009688;
+}
+
+.rating {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.rating-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  filter: grayscale(0%); /* Adjust as needed for your rating icon */
+}
+.left{
+  padding-left: 13px;
+}
+.right{
+  padding-right: 13px;
+}
+.right img{
+  width: 16px;
+  height: 16px;
+}
+.right p{
+  font-size: 18px;
+  color: rgb(228, 228, 117);
+}
+
+/* products.component.scss */
+.custom-button {
+  background-color: #666; /* Set the background color */
+  color: #fff; /* Set the text color */
+  padding: 10px 20px; /* Adjust the padding as needed */
+  border: none;
+  border-radius: 5px; /* Adjust the border radius as needed */
+  cursor: pointer;
+  margin: 5px; /* Add margin for spacing */
+}
+
+.custom-button:disabled {
+  background-color: #ccc; /* Set a different background color for disabled buttons */
+  cursor: not-allowed; /* Change cursor for disabled buttons */
+  color: #666; /* Set text color for disabled buttons */
+}
+

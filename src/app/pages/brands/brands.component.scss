@@ -27,17 +27,18 @@
   align-items: center;
 }
 
-.pagination-button {
-  background-color: #fff;
-  color: #959393;
+.custom-button {
+  background-color: #666;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
-  padding: 7px;
+  border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 130px;
+  margin: 5px;
 }
 
-.pagination-button:hover {
-  border: none;
-  background-color: #959393;
-  color: #fff;
+.custom-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
 }

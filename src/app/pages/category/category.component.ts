@@ -15,32 +15,32 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   constructor(private category: CategoryService) {}
   ngOnInit(): void {
-    this.loadCategories(1,10);
+    this.loadCategories(1, 10);
   }
 
   loadCategories(page: number, limit: number) {
     this.category.getCategories(page, limit).subscribe((data: any) => {
       this.categories = data.data;
       this.paginationResult = data.paginationResult;
+      console.log(this.paginationResult);
     });
   }
   nextPage() {
-    if (this.paginationResult.next) {
-      this.loadCategories(
-        this.paginationResult.next,
-        this.paginationResult.limit
-      );
+    if (
+      this.paginationResult.currentPage < this.paginationResult.numberOfPages
+    ) {
+      const nextPageNumber = this.paginationResult.currentPage + 1;
+      this.loadCategories(nextPageNumber, this.paginationResult.limit);
     }
   }
 
   prevPage() {
-    if (this.paginationResult.prev) {
-      this.loadCategories(
-        this.paginationResult.prev,
-        this.paginationResult.limit
-      );
+    if (this.paginationResult.currentPage > 1) {
+      const prevPageNumber = this.paginationResult.currentPage - 1;
+      this.loadCategories(prevPageNumber, this.paginationResult.limit);
     }
   }
+
   ngOnDestroy(): void {
     this.dispose$.next(null);
     this.dispose$.complete();

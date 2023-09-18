@@ -25,16 +25,21 @@ export class BrandsComponent implements OnInit, OnDestroy {
     });
   }
   nextPage() {
-    if (this.paginationResult.next) {
-      this.loadBrands(this.paginationResult.next, this.paginationResult.limit);
+    if (
+      this.paginationResult.currentPage < this.paginationResult.numberOfPages
+    ) {
+      const nextPageNumber = this.paginationResult.currentPage + 1;
+      this.loadBrands(nextPageNumber, this.paginationResult.limit);
     }
   }
 
   prevPage() {
-    if (this.paginationResult.prev) {
-      this.loadBrands(this.paginationResult.prev, this.paginationResult.limit);
+    if (this.paginationResult.currentPage > 1) {
+      const prevPageNumber = this.paginationResult.currentPage - 1;
+      this.loadBrands(prevPageNumber, this.paginationResult.limit);
     }
   }
+
   ngOnDestroy(): void {
     this.dispose$.next(null);
     this.dispose$.complete();
