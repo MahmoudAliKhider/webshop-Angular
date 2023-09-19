@@ -1,0 +1,17 @@
+<div class="side-filter">
+  <h3>Filter Options</h3>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="sortByName" (change)="applySort('title')">
+    <label class="form-check-label" for="sortByName">Sort by Name</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="sortByPrice" (change)="applySort('price')">
+    <label class="form-check-label" for="sortByPrice">Sort by Price</label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="sortBySold" (change)="applySort('price')">
+    <label class="form-check-label" for="sortBySold">Sort by Sold</label>
+  </div>
+
+</div>

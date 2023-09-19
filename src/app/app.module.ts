@@ -18,7 +18,7 @@ import { BrandsComponent } from './pages/brands/brands.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductsComponent } from './pages/products/products.component';
 import { CategoryHeaderComponent } from './components/category-header/category-header.component';
-import { SideFilterComponent } from './pages/side-filter/side-filter.component'; // Import NgxPaginationModule here
+import { SideFilterComponent } from './components/side-filter/side-filter.component'; // Import NgxPaginationModule here
 
 @NgModule({
   declarations: [
@@ -45,7 +45,7 @@ import { SideFilterComponent } from './pages/side-filter/side-filter.component';
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
     }),
-    NgxPaginationModule, 
+    NgxPaginationModule,
   ],
   providers: [
     {

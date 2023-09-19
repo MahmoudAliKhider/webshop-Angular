@@ -4,6 +4,13 @@
   font-family: 'Times New Roman', Times, serif;
   margin: 6px;
 }
+
+.container2{
+  position: absolute;
+  left: 88%;
+  top: 30%;
+
+}
 .card {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -62,20 +69,25 @@
   color: rgb(228, 228, 117);
 }
 
-/* products.component.scss */
 .custom-button {
-  background-color: #666; /* Set the background color */
-  color: #fff; /* Set the text color */
-  padding: 10px 20px; /* Adjust the padding as needed */
+  background-color: #666;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px; /* Adjust the border radius as needed */
+  border-radius: 5px;
   cursor: pointer;
-  margin: 5px; /* Add margin for spacing */
+  margin: 5px; 
 }
 
 .custom-button:disabled {
-  background-color: #ccc; /* Set a different background color for disabled buttons */
-  cursor: not-allowed; /* Change cursor for disabled buttons */
-  color: #666; /* Set text color for disabled buttons */
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
 }
 
+@media (max-width: 768px) {
+  .container2 {
+    position: static;
+    margin-top: 20px;
+  }
+}

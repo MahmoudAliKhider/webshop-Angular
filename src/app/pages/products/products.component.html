@@ -38,3 +38,7 @@
     <button class="btn custom-button" (click)="nextPage()"
       [disabled]="paginationResult.currentPage === paginationResult.totalPages">الصفحة التالية</button>
   </div>
+
+  <div class="container2 mt-4">
+    <app-side-filter (sortSelected)="applySort($event)"></app-side-filter>
+  </div>

@@ -17,12 +17,12 @@ export class ProductsComponent implements OnInit, OnDestroy {
   paginationResult: any = {
     totalItems: 0,
     totalPages: 0,
-    currentPage: 1,
+    currentPage: 0,
     limit: 6,
   };
   queryParams: { [key: string]: string } = {
     limit: `${this.paginationResult.limit}`,
-    page: '1', // Initialize page to 1
+    page: '1',
   };
 
   constructor(private productservice: ProductService) {}
@@ -42,9 +42,13 @@ export class ProductsComponent implements OnInit, OnDestroy {
           totalItems: data.paginationResult.totalItems,
           totalPages: data.paginationResult.numberOfPages,
           currentPage: data.paginationResult.currentPage,
-          limit: data.paginationResult.limit, // Update the limit as well
+          limit: data.paginationResult.limit,
         };
       });
+  }
+  applySort(sortOption: string) {
+    this.queryParams['sort'] = sortOption;
+    this.loadProducts();
   }
 
   nextPage() {
