@@ -1,0 +1,196 @@
+/* Customize the styling here */
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.product-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.product-details {
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow:1px 4px 3px 0 rgba(151,151,151,0.5);
+
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.price-details {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #009688;
+}
+
+.discount-price {
+  font-size: 1.1rem;
+  color: #ff5733;
+}
+
+.product-quantity,
+.product-sold,
+.product-category,
+.product-subcategories,
+.product-ratings {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ratings {
+  font-weight: bold;
+  color: #ffac33;
+}
+
+.product-colors {
+  margin-top: 20px;
+}
+
+.color-label {
+  font-weight: bold;
+}
+.product-images {
+  position: relative;
+}
+
+.small-images img {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-icons {
+  width: 80px;
+  height: 90px;
+  display: flex;
+  gap: 10px; /* Adjust the gap between color icons as needed */
+  margin-top: 10px;
+}
+
+.color-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 2;
+}
+
+.product-images .image-cover {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+
+.container {
+  margin-top: 4rem;
+
+  .row2 {
+    .col-md-12 {
+      .container2 {
+        margin-top: 4rem;
+        width: 40%;
+        .contain {
+          max-width: 700px;
+          margin: 0 auto;
+
+          .form-group {
+            margin-bottom: 1.5rem;
+
+            label {
+              font-weight: bold;
+            }
+
+            input[type="text"],
+            select {
+              width: 100%;
+            }
+          }
+
+          button[type="submit"] {
+            display: block;
+            width: 100%;
+            background-color: #333;
+            color: #e1e1e1;
+          }
+          .btn{
+            display: block;
+            width: 100%;
+            background-color: #333;
+            color: #e1e1e1;
+          }
+        }
+      }
+    }
+
+    .col-md-6 {
+      margin-left: 80px;
+      h2 {
+        margin-top: 4rem;
+      }
+
+      .review-section {
+        .card {
+          margin-bottom: 1.5rem;
+
+          .card-body {
+            .card-title {
+              font-size: 1.5rem;
+              font-weight: bold;
+            }
+
+            .rating {
+              display: flex;
+              align-items: center;
+              margin-top: 0.5rem;
+
+              .star {
+                font-size: 1.5rem;
+                color: #ffd700; // Set star color to gold
+
+                &.filled-star {
+                  color: #ffd700; // Set filled star color
+                }
+
+                &.empty-star {
+                  color: #ccc; // Set empty star color
+                }
+              }
+            }
+
+            .card-text {
+              font-size: 1.2rem;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
+}

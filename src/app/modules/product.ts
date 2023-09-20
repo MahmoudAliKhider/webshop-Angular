@@ -1,3 +1,7 @@
+export interface ProductResponse {
+  data: Product;
+}
+
 export interface Product {
   title: string;
   slug: string;
@@ -5,11 +9,18 @@ export interface Product {
   quantity: number;
   sold: number;
   price: number;
-  colors: string[]; // This should contain color options like ["Red", "Blue", "Green"]
+  priceAfterDiscount: number;
+  colors: string[];
   imageCover: string;
   images: string[];
-  category: string | null;
+  category: {
+    name: string;
+  };
   subcategories: string[];
-  ratingsAverage: number;
   ratingsQuantity: number;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+  reviews: any[];
+  id: string;
 }

@@ -12,7 +12,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   private readonly dispose$ = new Subject();
 
   products: any[] = [];
-  result:any;
+  result: any;
 
   paginationResult: any = {
     totalItems: 0,
@@ -37,7 +37,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
       .subscribe((data: any) => {
         this.products = data.data;
         console.log(data);
-        this.result=data.results
+        this.result = data.results;
         this.paginationResult = {
           totalItems: data.paginationResult.totalItems,
           totalPages: data.paginationResult.numberOfPages,

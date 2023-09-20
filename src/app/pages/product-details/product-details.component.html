@@ -1,0 +1,89 @@
+<div class="container mt-4">
+  <h1 class="text-center">{{ product?.title | titlecase}}</h1>
+
+  <div class="row" *ngIf="product">
+    <div class="col-md-6">
+      <div class="product-images">
+        <img class="image-cover" [src]="product.imageCover" alt="Product Image">
+        <div class="d-flex small-images">
+          <img *ngFor="let image of product.images" [src]="image" alt="Small Image">
+        </div>
+        <div class="color-icons">
+          <span *ngFor="let color of product.colors" [style.background-color]="color" class="color-icon"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <div class="product-details">
+        <div class="product-info">
+          <!-- <h6 class="product-title">{{ product.title }}</h6> -->
+          <p class="product-description">{{ product.description }}</p>
+          <div class="price-details">
+            <p class="product-price">
+              Price: <span class="price">{{ product.price | currency }}</span>
+            </p>
+            <p class="product-price-discount">
+              Discounted Price: <span class="discount-price">{{ product.priceAfterDiscount | currency }}</span>
+            </p>
+          </div>
+          <p class="product-quantity">Quantity Available: {{ product.quantity }}</p>
+          <p class="product-sold">Items Sold: {{ product.sold }}</p>
+          <p class="product-category">Category: {{ product.category.name }}</p>
+          <p class="product-subcategories">
+            Subcategories: {{ product.subcategories.join(', ') }}
+          </p>
+          <p class="product-ratings">
+            Ratings: <span class="ratings">{{ product.ratingsQuantity | number }}</span>
+          </p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row2">
+    <div class="d-flex col-md-12">
+      <div class="container2 mt-7" *ngIf="reviewForm">
+        <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" class="contain">
+          <div class="form-group">
+            <label for="title">Review Title</label>
+            <input type="text" class="form-control" id="title" formControlName="title" required />
+          </div>
+          <div class="form-group">
+            <label for="ratings">Ratings</label>
+            <select class="form-control" id="ratings" formControlName="ratings" required>
+              <option *ngFor="let rating of ratingsList" [value]="rating">{{ rating }}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Submit Review</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="mt-4">Product Reviews</h2>
+        <div class="review-section">
+          <div class="reviews" *ngFor="let review of reviews">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">{{ review.title }}</h5>
+                <div class="rating">
+                  <span class="star" [ngClass]="{'filled-star': i < review.ratings}"
+                    *ngFor="let i of [1, 2, 3, 4, 5]">&#9733; </span>
+                  <span class="star" [ngClass]="{'empty-star': i >= review.ratings}"
+                    *ngFor="let i of [1, 2, 3, 4, 5]">&#9733;</span>
+                    <p>{{review.ratings}}</p>
+                </div>
+                <p class="card-text">{{ review.user.name }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

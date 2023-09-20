@@ -8,6 +8,7 @@ import { CategoryComponent } from './pages/category/category.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrandsComponent } from './pages/brands/brands.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'categories', component: CategoryComponent },
       { path: 'brands', component: BrandsComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'products/:id', component: ProductDetailsComponent },
     ],
   },
   { path: 'not-found', component: NotFoundComponent },
